@@ -1,0 +1,121 @@
+*{
+    /* asteriks ile tüm elementlerin margin ve padding değerleri sıfırlandı. box-sizing ile elementlere eklenen border, padding ve outline ların elementin verilen width ve height değerlerinin dışına taşması engellenir. */
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    
+}
+
+
+a{
+    /* sayfadaki tüm anchor elementlerinin display özelliğini block yaparak hepsini tüm yatay alanı kaplayacak hale getirdik. Ardından text-align:center ile yazıyı ortaladık.  */
+    display: block;
+    text-align: center;
+}
+
+
+.container{
+    /* tüm içeriğin içine konduğu container divinin genişliği yüzde 90 olarak verildi. margin: 0 auto ile de container divinin yatayda ortalanmasını sağladık.  */
+    width:90%;
+    margin:0 auto;
+}
+
+
+.logo{
+    /* logo resmini div içine aldık ve dive text-align: center yapılıp resim ortalandı.  */
+    text-align: center;
+
+}
+
+.buttons{
+    /* arama input ve butonları bir div içine alındı. text-align:center ile herşey ortalandı. */
+    background-color: rgb(226, 225, 225);
+    text-align: center;
+    padding: 1px;
+    margin:1px;
+
+
+}
+
+/* arama input alanı width default değeri sistem tarafından verilir. Örnekteki genişliğe uydurmak için 300px değeri verildi.  */
+.arama_text{
+    width: 300px;
+}
+
+
+/* linklerin toplandığı merkez dive yükseklik verildi.  */
+.links{
+    height:75px;
+
+}
+
+
+/* linklerin sol kısmına %37 width verildi. yüksekliği height:75px ile sabitlendi. text-align:center ile yazılar ortaya alındı. float:left ile leftSide adındaki div sola yaslandı.  */
+.leftSide{
+    padding-top:12px;
+    float: left;
+    margin:1px;
+    background-color: rgb(126,229,218);
+    width: 37%;
+    height: 75px;
+    text-align: center;
+}
+
+/* linklerin sol kısmına %19 width verildi. yüksekliği height:75px ile sabitlendi. text-align:center ile yazılar ortaya alındı. float:left ile middleSide adındaki div sola yaslandı.  */
+
+.middleSide{
+    padding-top:5px;
+    float: left;
+    margin:1px;
+    background-color: rgb(112,204,194);
+    width: 19%;
+    height: 75px;
+}
+
+/* middleSide divinin içindeki herşeyin font-size değeri 13px yapıldı.  */
+.middleSide *{
+    font-size: 13px;
+}
+
+/* linklerin sol kısmına %43 width verildi. yüksekliği height:75px ile sabitlendi. text-align:center ile yazılar ortaya alındı. float:left ile rightSide adındaki div sola yaslandı.  */
+.rightSide{
+    float: left;
+    margin:1px;
+    background-color: rgb(98,179,170);
+    width: 43%;
+    text-align: center;
+    height: 75px;
+}
+
+/* middleSide divinin içindeki herşeyin font-size değeri 13px yapıldı.  */
+
+.rightSide *{
+    font-size: 13px;
+}
+
+/* rightSide içindeki archiveLink class adına sahip a etiketi inline görünüme çekildi. butonun yanına gelmesi için */
+.rightSide .archiveLink{
+    display: inline;
+}
+
+
+/* subscribe butonuna ince bir padding verildi. görünüm ödevdekine daha benzedi.  */
+.subBtn{
+    padding: 1px 2px;
+}
+
+/*  ilk olarak float:left den kurtulmak için, links divinin after pseudo-elementine clear:both denilerek  float kaldırıldı.  */
+
+.links::after{
+    clear: both;
+
+}
+
+
+/* copyright yazı text-align ile ortalandı. margin:20px ile üst tarafında boşluk bırakıldı.  */
+.footer_text{
+    font-size: 13px;
+    text-align: center;
+
+    margin:20px;
+}
